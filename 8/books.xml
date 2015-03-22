@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Edited by XMLSpy -->
+<CATALOG>
+    <CD>
+        <CATEGORY>Children</CATEGORY>
+        <TITLE>Harry Potter</TITLE>
+        <AUTHOR>J K. Rowling</AUTHOR>
+        <YEAR>2005</YEAR>
+        <PRICE>29.99</PRICE>
+    </CD>
+    <CD>
+        <CATEGORY>Web</CATEGORY>
+        <TITLE>Learning XML</TITLE>
+        <AUTHOR>Erik T. Ray</AUTHOR>
+        <YEAR>2003</YEAR>
+        <PRICE>39.95</PRICE>
+    </CD>
+</CATALOG>

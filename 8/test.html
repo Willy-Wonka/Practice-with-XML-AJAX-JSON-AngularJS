@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <script>
+            if (window.XMLHttpRequest)
+            {// code for IE7+, Firefox, Chrome, Opera, Safari
+                xmlhttp=new XMLHttpRequest();
+            }
+            else
+            {// code for IE6, IE5
+                xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+            }
+            xmlhttp.open("GET","test.php?filename=books.xml",false);
+            xmlhttp.send();
+            xmlDoc=xmlhttp.responseXML;
+            
+            document.write("<table border='1'>");
+            document.write("<tr><td>CATEGORY</td><td>TITLE</td><td>AUTHOR</td><td>YEAR</td><td>PRICE</td></tr>");
+            var x=xmlDoc.getElementsByTagName("CD");
+            for (i=0;i<x.length;i++)
+            {
+                document.write("<tr><td>");
+                document.write(x[i].getElementsByTagName("CATEGORY")[0].childNodes[0].nodeValue);
+                document.write("</td><td>");
+                document.write(x[i].getElementsByTagName("TITLE")[0].childNodes[0].nodeValue);
+                document.write("</td><td>");
+                document.write(x[i].getElementsByTagName("AUTHOR")[0].childNodes[0].nodeValue);
+                document.write("</td><td>");
+                document.write(x[i].getElementsByTagName("YEAR")[0].childNodes[0].nodeValue);
+                document.write("</td><td>");
+                document.write(x[i].getElementsByTagName("PRICE")[0].childNodes[0].nodeValue);
+                document.write("</td></tr>");
+            }
+            document.write("</table>");
+        </script>
+    </body>
+</html>
